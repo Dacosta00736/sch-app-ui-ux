@@ -11,5 +11,14 @@
 }
 
 html,body {
-  font-family: 'Montserrat' !important;
+  font-family: 'Open-sans' !important;
+  background: #f7f3f3;
+}
+
+/* Input Fields */
+.form-control:focus {
+  outline: none;
+  border: 1px solid #36c;
+  transition: 500ms ease;
+  box-shadow: none;
 }
