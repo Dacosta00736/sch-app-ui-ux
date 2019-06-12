@@ -7,10 +7,62 @@
   <title>Note Interface and Formats</title>
   <!-- bootstrap style -->
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <!-- Quilljs Included style -->
+  <link rel="stylesheet" href="../assets/css/quill.snow.css">
   <!-- main custom style -->
   <link rel="stylesheet" href="../assets/css/notes.css">
 </head>
 <body>
-  <h2>Note Interface &amps; Formats</h2>
+  <h2 class="mt-4 text-center" id="title">Note Interface &amp; Formats</h2>
+
+  <section class="container">
+    <div id="editor"></div>
+    <!-- gets total length of typed letters -->
+    <div class="text-muted small" id="pageAddedSection">
+      Added pages: <span id="pageAdded"></span>
+    </div>
+    <!-- display page count -->
+    <div id="pageCounterSection" class="clearfix mt-2">
+      <div class="text-muted small float-left">
+        Page <span id="pageCount"></span> of <span id="pageTotal"></span>
+      </div>
+      <div class="float-right">
+        <ul class="pagination pagination-sm">
+          <li class="page-item disabled">
+            <a href="#" class="page-link" id="paginatePrev">prev</a>
+          </li>
+          <li class="page-item ml-2">
+            <a href="#" class="page-link" id="paginateNext" onclick="paginateNote(1)">next</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- functional buttons -->
+    <div class="mt-3">
+      <span class="">
+        <!-- helps add new plain sheet for new page -->
+        <button class="btn btn-outline-warning" id="addPage">
+          + page
+        </button>
+        <!-- help preview saved pages -->
+        <button type="button" class="btn btn-outline-dark" id="previewPages">
+          preview
+        </button>
+        <!-- help save pages of lesson note -->
+        <button type="button" class="btn btn-outline-primary" id="saveLessonNote">
+          save
+        </button>
+        <!-- for clearing typed contents in text field -->
+        <button type="button" class="btn btn-outline-danger float-right" id="clearTextField">
+          clear
+        </button>
+      </span>
+    </div>
+  </section>
+
+  <!-- javaScript files -->
+  <script src="../assets/js/quill.min.js"></script>
+  <script src="../assets/js/notes.js"></script>
+
 </body>
 </html>
