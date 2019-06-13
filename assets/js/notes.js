@@ -73,7 +73,7 @@ function paginateNote(n) {
   let pages = parseInt(id('pageTotal').innerHTML);
   let pageCount = parseInt(id('pageCount').innerHTML);
   let page = JSON.parse(localStorage.note);
-  let inc = pageCount + n;
+  let inc = pageCount + (n);
   if (pageCount > 1) {
      id('paginatePrev').parentElement.classList.remove('disabled');
   }else {
