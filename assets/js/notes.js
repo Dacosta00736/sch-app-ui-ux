@@ -89,7 +89,7 @@ function paginateNote(n) {
 
   console.log(inc + n);
   id('pageCount').innerHTML = pageCount + n;
-  /*
+  /*  testing
    // check to see if total added page count exceeds
      if ( pageCount === (pages - 1) ) {
      id('pageCount').innerHTML = pages;
